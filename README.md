@@ -6,8 +6,7 @@
 ## 📖 **Daftar Isi**
 1. [ Fitur](#fitur)  
 2. [ Tampilan Aplikasi](#tampilan-aplikasi)  
-3. [ Struktur Proyek](#struktur-proyek)  
-4. [ Penjelasan File](#penjelasan-file)  
+
 
 
 ---
