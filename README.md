@@ -6,12 +6,9 @@
 ## 📖 **Daftar Isi**
 1. [ Fitur](#fitur)  
 2. [ Tampilan Aplikasi](#tampilan-aplikasi)  
-3. [ Instalasi & Pengaturan](#instalasi--pengaturan)  
-4. [ Struktur Proyek](#struktur-proyek)  
-5. [ Penjelasan File](#penjelasan-file)  
-6. [ Mengirim Email dengan EmailJS](#mengirim-email-dengan-emailjs)  
-7. [ Penanganan Error & Refresh](#penanganan-error--refresh)  
-8. [ Lisensi](#lisensi)  
+3. [ Struktur Proyek](#struktur-proyek)  
+4. [ Penjelasan File](#penjelasan-file)  
+
 
 ---
 
@@ -54,34 +51,4 @@
  |![image](https://github.com/user-attachments/assets/2a8cc1cc-8e20-4a28-9fb2-9a3bb27b8c2a)
 
 |
-
-
-##  **Instalasi & Pengaturan**
-
-### **1️ Clone repository**
-git clone https://github.com/username/repository.git
-cd repository
-
-### **2 Install dependency**
-flutter pub get
-
-### **3 Jalankan Aplikasi**
-flutter run
-
-##  **Struktur Project**
-
-lib/
-│── assets/                      # Folder penyimpanan gambar
-│   ├── P1.jpg                   # Gambar portofolio 1
-│   ├── P2.jpg                   # Gambar portofolio 2
-│   ├── profile.png              # Foto profil
-│── screens/                      # Halaman utama aplikasi
-│   ├── home_screen.dart         # Halaman utama dengan menu
-│   ├── profile_screen.dart      # Halaman "Tentang Saya"
-│   ├── resume_screen.dart       # Halaman Resume
-│   ├── portfolio_screen.dart    # Halaman Portofolio
-│   ├── contact_screen.dart      # Halaman Kontak (EmailJS)
-│── widgets/                      # Komponen yang dapat digunakan ulang
-│   ├── menu_button.dart         # Tombol menu animasi
-│── main.dart                     # Titik masuk utama aplikasi
 
