@@ -29,7 +29,9 @@
 ##  **Tampilan Aplikasi**
 | Halaman Utama | Portofolio | Kontak |
 |--------------|-----------|--------|
-| ![Home](screenshots/home.png) | ![Portfolio](screenshots/portfolio.png) | ![Contact](screenshots/contact.png) |
+| ![Home](![image](https://github.com/user-attachments/assets/5347233f-a53f-4f38-99ee-ed41dce1ec52)
+)![image](https://github.com/user-attachments/assets/cdaf6fcf-a8f4-43d9-9d4d-33e12ce4a83d)
+ | ![Portfolio](screenshots/portfolio.png) | ![Contact](screenshots/contact.png) |
 
 ---
 
