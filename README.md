@@ -27,8 +27,8 @@
 ---
 
 ##  **Tampilan Aplikasi**
-| Halaman Utama | Portofolio | Kontak |
-|--------------|-----------|--------|
+| Halaman Utama |
+|--------------|
 | ![image](https://github.com/user-attachments/assets/5347233f-a53f-4f38-99ee-ed41dce1ec52)![image](https://github.com/user-attachments/assets/cdaf6fcf-a8f4-43d9-9d4d-33e12ce4a83d)
  |![image](https://github.com/user-attachments/assets/a50d6bb9-16c5-45d9-8867-04ae44a1aded)![image](https://github.com/user-attachments/assets/df60d484-d0f2-47fa-bffd-f2a634c95c8c)
 
