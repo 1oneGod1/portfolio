@@ -1,16 +1,64 @@
-# myportfolio
+#  Aplikasi Portofolio Flutter  
+ Aplikasi portofolio berbasis Flutter yang menampilkan **Profil, Resume, Portofolio, dan Kontak** dengan **animasi halus** serta **integrasi EmailJS** untuk mengirim pesan langsung ke email.
 
-A new Flutter project.
+---
 
-## Getting Started
+## 📖 **Daftar Isi**
+1. [ Fitur](#fitur)  
+2. [ Tampilan Aplikasi](#tampilan-aplikasi)  
+3. [ Instalasi & Pengaturan](#instalasi--pengaturan)  
+4. [ Struktur Proyek](#struktur-proyek)  
+5. [ Penjelasan File](#penjelasan-file)  
+6. [ Mengirim Email dengan EmailJS](#mengirim-email-dengan-emailjs)  
+7. [ Penanganan Error & Refresh](#penanganan-error--refresh)  
+8. [ Lisensi](#lisensi)  
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+##  **Fitur**
+✅ **Desain Elegan** dengan Tema Gelap + Aksen Kuning  
+✅ **Animasi Halus** untuk Menu & Perpindahan Layar  
+✅ **Bagian Profil** dengan Informasi & Prestasi Pribadi  
+✅ **Bagian Resume** dengan Riwayat Pekerjaan & Pendidikan  
+✅ **Bagian Portofolio** dengan Proyek & Gambar  
+✅ **Bagian Kontak** dengan **Integrasi API EmailJS**  
+✅ **Penanganan Error & Tombol Refresh** jika pengiriman email gagal  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  **Tampilan Aplikasi**
+| Halaman Utama | Portofolio | Kontak |
+|--------------|-----------|--------|
+| ![Home](screenshots/home.png) | ![Portfolio](screenshots/portfolio.png) | ![Contact](screenshots/contact.png) |
+
+---
+
+##  **Instalasi & Pengaturan**
+
+### **1️ Clone repository**
+git clone https://github.com/username/repository.git
+cd repository
+
+### **2 Install dependency**
+flutter pub get
+
+### **3 Jalankan Aplikasi**
+flutter run
+
+##  **Struktur Project**
+
+lib/
+│── assets/                      # Folder penyimpanan gambar
+│   ├── P1.jpg                   # Gambar portofolio 1
+│   ├── P2.jpg                   # Gambar portofolio 2
+│   ├── profile.png              # Foto profil
+│── screens/                      # Halaman utama aplikasi
+│   ├── home_screen.dart         # Halaman utama dengan menu
+│   ├── profile_screen.dart      # Halaman "Tentang Saya"
+│   ├── resume_screen.dart       # Halaman Resume
+│   ├── portfolio_screen.dart    # Halaman Portofolio
+│   ├── contact_screen.dart      # Halaman Kontak (EmailJS)
+│── widgets/                      # Komponen yang dapat digunakan ulang
+│   ├── menu_button.dart         # Tombol menu animasi
+│── main.dart                     # Titik masuk utama aplikasi
+
