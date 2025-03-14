@@ -60,7 +60,7 @@ class ProfileScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "About Andi Purba",
+                  "My Job?",
                   style: TextStyle(
                     color: Colors.amber,
                     fontSize: 18,
