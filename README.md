@@ -110,3 +110,177 @@ Aplikasi portofolio berbasis Flutter yang menampilkan **Profil, Resume, Portofol
 
 ---
 
+# 📌 Penjelasan Kode
+
+## 1️⃣ Menu Navigasi Animasi
+**File:** `home_screen.dart`
+
+### 📌 Fitur:
+✔ Menu navigasi dengan animasi smooth saat dibuka & ditutup.  
+✔ Memungkinkan navigasi ke **Profile, Resume, Portfolio,** dan **Contact**.
+
+### 🔹 Kode:
+```dart
+class _HomeScreenState extends State<HomeScreen> {
+  bool isMenuOpen = false;
+
+  void toggleMenu() {
+    setState(() {
+      isMenuOpen = !isMenuOpen;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Column(
+          children: [
+            AnimatedContainer(
+              duration: Duration(milliseconds: 300),
+              height: isMenuOpen ? 200 : 0,
+              child: Container(
+                color: Colors.yellow,
+                child: Column(
+                  children: [
+                    menuItem(Icons.person, "My Profile", ProfileScreen()),
+                    menuItem(Icons.description, "Resume", ResumeScreen()),
+                    menuItem(Icons.work, "Portfolio", PortfolioScreen()),
+                    menuItem(Icons.email, "Contact Me", ContactScreen()),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+```
+
+---
+
+## 2️⃣ Halaman Profil
+**File:** `profile_screen.dart`
+
+### 📌 Fitur:
+✔ Menampilkan **nama, deskripsi pekerjaan, dan kontak** pengguna.  
+✔ Tampilan responsif dengan warna **hitam & kuning**.
+
+### 🔹 Kode:
+```dart
+Column(
+  children: [
+    Text("My Job?", style: TextStyle(color: Colors.yellow, fontSize: 18)),
+    Text("Informatics Teacher", style: TextStyle(color: Colors.white, fontSize: 22)),
+    Text(
+      "Hello! I am an Informatics teacher for middle and high school students...",
+      style: TextStyle(color: Colors.grey, fontSize: 14),
+    ),
+  ],
+)
+```
+
+---
+
+## 3️⃣ Halaman Resume (Pengalaman & Pendidikan)
+**File:** `resume_screen.dart`
+
+### 📌 Fitur:
+✔ Menampilkan daftar **pengalaman kerja & riwayat pendidikan** dalam kartu responsif.  
+✔ Ikon **profesi & institusi pendidikan** ditampilkan bersama teks.
+
+### 🔹 Kode:
+```dart
+Widget buildExperienceCard(Map<String, String> data) {
+  return Card(
+    color: Colors.black,
+    child: Padding(
+      padding: EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Text(data["icon"]!, style: TextStyle(fontSize: 24)),
+          Column(
+            children: [
+              Text(data["title"]!, style: TextStyle(color: Colors.white, fontSize: 18)),
+              Text(data["institution"]!, style: TextStyle(color: Colors.yellow, fontSize: 14)),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+```
+
+---
+
+## 4️⃣ Halaman Portofolio
+**File:** `portfolio_screen.dart`
+
+### 📌 Fitur:
+✔ Menampilkan daftar **proyek portofolio** dalam **grid card** dengan gambar & deskripsi.
+
+### 🔹 Kode:
+```dart
+ListView.builder(
+  itemCount: portfolioItems.length,
+  itemBuilder: (context, index) {
+    final item = portfolioItems[index];
+    return Card(
+      child: Column(
+        children: [
+          Image.asset(item["image"]!, fit: BoxFit.cover, height: 200),
+          Text(item["title"]!, style: TextStyle(color: Colors.yellow, fontSize: 18)),
+          Text(item["description"]!, style: TextStyle(color: Colors.white, fontSize: 14)),
+        ],
+      ),
+    );
+  },
+)
+```
+
+---
+
+## 5️⃣ Halaman Kontak (EmailJS API)
+**File:** `contact_screen.dart`
+
+### 📌 Fitur:
+✔ Formulir kontak dengan **nama, email, dan pesan**.  
+✔ Menggunakan **EmailJS API** untuk mengirim pesan langsung ke email pengguna.
+
+### 🔹 Kode:
+```dart
+Future<void> sendEmail() async {
+  final response = await http.post(
+    Uri.parse('https://api.emailjs.com/api/v1.0/email/send'),
+    headers: {'Content-Type': 'application/json'},
+    body: jsonEncode({
+      'service_id': 'service_0t30daf',
+      'template_id': 'template_9smdhzi',
+      'user_id': 'YJQoP43cSX51foN43',
+      'template_params': {
+        'name': _nameController.text,
+        'email': _emailController.text,
+        'message': _messageController.text,
+      },
+    }),
+  );
+
+  if (response.statusCode == 200) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("Message sent successfully!")),
+    );
+  }
+}
+```
+
+---
+
+📌 **Catatan:**
+- Pastikan untuk mengganti `service_id`, `template_id`, dan `user_id` sesuai dengan kredensial EmailJS Anda.
+- Sesuaikan desain UI agar sesuai dengan branding atau preferensi pengguna.
+
+
+
